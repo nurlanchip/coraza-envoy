@@ -1,0 +1,20 @@
+version: "3"
+services:
+  envoy-direct:
+    build: .
+    entrypoint: /bin/sh -c '/usr/local/bin/envoy -c /etc/envoy/envoy.yaml --log-level warning --service-cluster envoy --service-node envoy > /var/log/envoy/error.log 2>&1'
+    expose:
+      - "80"
+    container_name: envoy-direct
+    network_mode: host
+    restart: always
+    volumes:
+      - ./envoy.yaml:/etc/envoy/envoy.yaml
+      - ./coraza.wasm:/etc/envoy/coraza.wasm
+      - ./access.log:/var/log/envoy/access.log
+      - ./error.log:/var/log/envoy/error.log
+      
+  juiceshop_prod:
+    image: bkimminich/juice-shop
+    ports:
+      - 3000:3000
