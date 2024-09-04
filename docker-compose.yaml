@@ -1,4 +1,3 @@
-version: "3"
 services:
   envoy-direct:
     build: .
@@ -13,8 +12,3 @@ services:
       - ./coraza.wasm:/etc/envoy/coraza.wasm
       - ./access.log:/var/log/envoy/access.log
       - ./error.log:/var/log/envoy/error.log
-      
-  juiceshop_prod:
-    image: bkimminich/juice-shop
-    ports:
-      - 3000:3000

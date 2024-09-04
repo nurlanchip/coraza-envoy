@@ -117,7 +117,7 @@ static_resources:
                   address:
                     socket_address:
                       address: 0.0.0.0 # Replace with your backend server IP
-                      port_value: 3000        # Replace with your backend server port
+                      port_value: 80        # Replace with your backend server port
 
 admin:
   access_log_path: "/var/log/envoy/error.log"
