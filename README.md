@@ -1,50 +1,50 @@
-# OWASP Coraza WAF with Envoy Webserver
+# OWASP Coraza WAF dengan Envoy Webserver
 
-This project demonstrates how to set up OWASP Coraza WAF with Envoy web server using Docker.
+Proyek ini menunjukkan cara menginstal OWASP Coraza WAF dengan server web Envoy menggunakan Docker.
 
-## Prerequisites
+## Prasyarat
 
-- Docker and Docker Compose installed on your machine.
+- Docker dan Docker Compose sudah terpasang di mesin Anda.
 
-## Installation
+## Instalasi
 
-1. Clone the repository:
+1. Clone repositori:
 
    ```bash
    git clone https://github.com/nurlanchip/coraza-envoy.git
    ```
 
-2. Navigate to the project directory:
+2. Masuk ke direktori proyek:
 
    ```bash
    cd coraza-envoy
    ```
 
-3. Edit the `envoy.yaml` file to update the backend server's IP address and port:
+3. Edit file `envoy.yaml` untuk memperbarui alamat IP dan port server backend:
 
    ```bash
    nano envoy.yaml
    ```
 
-   Modify lines 119 and 120 to reflect the correct backend server IP and port. Then save the changes.
+   Ubah baris 119 dan 120 untuk mencerminkan alamat IP dan port server backend yang benar. Kemudian simpan perubahan.
 
-4. Start the Docker containers:
+4. Jalankan Docker container:
 
    ```bash
    docker compose up
    ```
 
-5. Access the application in your browser at:
+5. Akses aplikasi di browser Anda melalui:
 
    ```bash
-   http://<your-ip-address>
+   http://<alamat-ip-anda>
    ```
 
-## Notes
+## Catatan
 
-- Make sure to replace `<your-ip-address>` with the actual IP address of the machine where Docker is running.
-- The Envoy proxy will handle traffic and route it through the Coraza WAF for security.
+- Pastikan untuk mengganti `<alamat-ip-anda>` dengan alamat IP sebenarnya dari mesin tempat Docker berjalan.
+- Envoy proxy akan menangani lalu lintas dan merutekannya melalui Coraza WAF untuk keamanan.
 
-## License
+## Lisensi
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
