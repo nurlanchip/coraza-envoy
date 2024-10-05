@@ -10,5 +10,5 @@ services:
     volumes:
       - ./envoy.yaml:/etc/envoy/envoy.yaml
       - ./coraza.wasm:/etc/envoy/coraza.wasm
-      - ./access.log:/var/log/envoy/access.log
-      - ./error.log:/var/log/envoy/error.log
+      - /var/log/envoy/access.log:/var/log/envoy/access.log
+      - /var/log/envoy/error.log:/var/log/envoy/error.log
