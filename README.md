@@ -45,6 +45,11 @@ Proyek ini menunjukkan cara menginstal OWASP Coraza WAF dengan server web Envoy 
 - Pastikan untuk mengganti `<alamat-ip-anda>` dengan alamat IP sebenarnya dari mesin tempat Docker berjalan.
 - Envoy proxy akan menangani lalu lintas dan merutekannya melalui Coraza WAF untuk keamanan.
 
+## Referensi
+
+- Kode pertama dibuat oleh Zufar Dhiyaulhaq : https://github.com/zufardhiyaulhaq/envoy-http-proxy
+- Kemudian ditambakan fungsi export logs oleh Rizky Fachrurozy : https://github.com/blackabed/ProteksiCoraza
+
 ## Lisensi
 
 Proyek ini dilisensikan di bawah Lisensi MIT. Lihat file [LICENSE](LICENSE) untuk detail lebih lanjut.
